@@ -1,0 +1,25 @@
+{
+  "name": "@appjumpstart/apl",
+  "description": "",
+  "main": "dist/apl.js",
+  "module": "dist/apl.m.js",
+  "browser": "dist/apl.browser.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "lint": "eslint --ext js,jsx components test",
+    "build:site": "NODE_ENV=production webpack",
+    "pretest": "dist --babel",
+    "test": "ava"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@ianwalter/babel-preset-lib": "^1.1.0",
+    "@ianwalter/dist": "^3.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@ianwalter/lib",
+      "@babel/preset-react"
+    ]
+  }
+}
